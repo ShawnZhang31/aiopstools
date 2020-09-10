@@ -23,13 +23,13 @@ Python2 and python3 are all supported.
 
 Aiopstools provides capabilities:
 
-[ Anomaly detection](https://github.com/jixinpu/aiopstools/tree/master/docs/anomal_detection_test.md)
+[ Anomaly detection](./docs/anomal_detection_test.md)
 
-[Alarm convergence](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_convergence_test.md)
+[Alarm convergence](./docs/alarm_convergence_test.md)
 
-[Time Series Forecasting Method](https://github.com/jixinpu/aiopstools/tree/master/docs/timeseries_predict_test.md)
+[Time Series Forecasting Method](./docs/timeseries_predict_test.md)
 
-[Association analysis for alarms](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_association_test.md)
+[Association analysis for alarms](./docs/alarm_association_test.md)
 
 ## Versions
 
