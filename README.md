@@ -1,50 +1,48 @@
 # aiopstools
-**Aiopstools** is a toolkit for aiops. It realizes some ops scenes by using ai. You can import modules easily to achieve functions.  
+aiopstools是aiops领域公开的工具包，里面提供的功能包括：
+- 时间序列的预测；
+- 异常检测；
+- 报警收敛；
+- 报警关联分析；
 
-[ 中文文档](https://github.com/jixinpu/aiopstools/blob/master/README_CN.md)
-
-## Installation
-
+## 安装
+目前既支持python2，也支持python3，使用virtualenv配置开发合计
 ```
 git clone https://github.com/jixinpu/aiopstools.git
 cd aiopstools
-python setup.py install
+# 创建开发虚拟环境,以python3为例
+virtualenv --no-site-packages venv -p python3
+# 安装依赖
+pip install -r requirements.txt
 ```
 
-Python2 and python3 are all supported.
+## 功能模块
 
-## Modules
+目前我们提供的功能如下：
 
-Aiopstools provides capabilities:
+[时间序列异常检测](https://github.com/jixinpu/aiopstools/tree/master/docs/anomal_detection_test.md)
 
-[ Anomaly detection](https://github.com/jixinpu/aiopstools/tree/master/docs/anomal_detection_test.md)
+[报警收敛](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_convergence_test.md)
 
-[Alarm convergence](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_convergence_test.md)
+[时间序列预测](https://github.com/jixinpu/aiopstools/tree/master/docs/timeseries_predict_test.md)
 
-[Time Series Forecasting Method](https://github.com/jixinpu/aiopstools/tree/master/docs/timeseries_predict_test.md)
+[报警关联分析](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_association_test.md)
 
-[Association analysis for alarms](https://github.com/jixinpu/aiopstools/tree/master/docs/alarm_association_test.md)
+## 版本更新
 
-## Versions
+**2018.12.01** 时间序列预测、异常检测、报警收敛；
 
-**2018.12.01** Time series forecasting、anomaly detection、alarm convergence；
+**2019.2.15** 微软论文报警关联分析； 
 
-**2019.2.15** Association analysis； 
+### 交流
+一下是fork的原始项目的作者的信息:
+> 如果对aiops感兴趣，可以和我进行交流，我的邮箱：jixinpu@126.com
 
-## Supports
+> 除此之外，我还建立了aiops的知乎专栏，上面会经常更新一些aiops的最新研究进展，知乎专栏地址：https://zhuanlan.zhihu.com/c_178702079
 
-If have interest in aiops, you can contact me. My email is jixinpu@126.com
+## 问题
 
-In addition to this, i have a special column about aiops, which updates recent progress in the field. The url of special column is https://zhuanlan.zhihu.com/c_178702079.
-
-## Problems
-
-1.If you use python3, please altering the file's content.
-
-```
-/site-packages/pybrain/tools/functions.py", line 4, expm2 to expm.
-```
-
-
-
-
+1. 如果您使用python3，需要将/site-packages/pybrain/tools/functions.py", line 4的expm2改成expm。
+    >如果没有报错的话也可以不理会这个问题
+2. 由于该项目是2018年的项目，注意不支持tensorflow 1.5以上的版本
+    > 正在实现pytorch版本
