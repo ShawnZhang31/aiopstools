@@ -1,3 +1,11 @@
+'''
+Author: jixinpu
+Date: 2020-09-09 15:08:53
+LastEditors: shawnzhang
+LastEditTime: 2020-09-10 11:33:41
+FilePath: /aiopstools/aiopstools/anomaly_detection/voting.py
+Description: 无监督投票检测机制
+'''
 #-*- encoding: utf-8 -*-
 
 import aiopstools.anomaly_detection.models as models
