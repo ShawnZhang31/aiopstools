@@ -2,7 +2,7 @@
 Author: jixinpu
 Date: 2020-09-09 15:08:53
 LastEditors: shawnzhang
-LastEditTime: 2020-09-10 16:55:00
+LastEditTime: 2020-09-11 11:40:49
 FilePath: /aiopstools/examples/detection.py
 Description: 时间序列异常检测示例脚本
 '''
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     history_data, check_value = get_data(args.data_dir)
     
-    # 无监督投票检测机制
+    无监督投票检测机制
     check_result = voting(history_data, check_value, args.period_freq, args.voting_num)
     print('-------------------------------------------------------')
     print("final result: %s" %check_result)

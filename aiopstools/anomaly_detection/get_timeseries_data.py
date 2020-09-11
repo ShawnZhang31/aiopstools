@@ -2,7 +2,7 @@
 Author: shawnzhang
 Date: 2020-09-09 15:08:53
 LastEditors: shawnzhang
-LastEditTime: 2020-09-10 16:53:12
+LastEditTime: 2020-09-11 11:42:17
 FilePath: /aiopstools/aiopstools/anomaly_detection/get_timeseries_data.py
 Description: 从csv文件中获取时间序列数据
 '''
@@ -26,11 +26,13 @@ def get_data(filename):
         b = time.strftime("%Y-%m-%d %H:%M:%S", a)
         timestamp_list.append(b)
         value_list.append(value)
-    dta = pd.Series(value_list[:-1])
-    dta = dta.fillna(dta.mean())
+    dta = pd.Series(value_list[:-1]) 
+    dta = dta.fillna(dta.mean())    # 使用均值来填充缺失的值
     dta.index = pd.Index(timestamp_list[:-1])
     dta.index = pd.DatetimeIndex(dta.index)
     # 最后一个点为检测点
     check_value = value_list[-1]
-    # print("dta: \n{} \n check_value:\n{}\n".format(dta, check_value))
     return dta, check_value
+
+# test
+get_data("./aiopstools/anomaly_detection/data/data.csv")
