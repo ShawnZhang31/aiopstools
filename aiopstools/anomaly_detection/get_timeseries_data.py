@@ -1,3 +1,11 @@
+'''
+Author: shawnzhang
+Date: 2020-09-09 15:08:53
+LastEditors: shawnzhang
+LastEditTime: 2020-09-10 16:53:12
+FilePath: /aiopstools/aiopstools/anomaly_detection/get_timeseries_data.py
+Description: 从csv文件中获取时间序列数据
+'''
 #-*- encoding: utf-8 -*-
 
 import time
@@ -24,4 +32,5 @@ def get_data(filename):
     dta.index = pd.DatetimeIndex(dta.index)
     # 最后一个点为检测点
     check_value = value_list[-1]
+    # print("dta: \n{} \n check_value:\n{}\n".format(dta, check_value))
     return dta, check_value
